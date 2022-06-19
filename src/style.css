@@ -39,3 +39,20 @@ display:flex;
 flex-direction:column;
 padding: 0 0 50px 50px;
 }
+
+
+.card {
+  margin: 0px 50px 0px 50px;
+}
+
+.star {
+ align-self: center;
+}
+
+.card-pic {
+  border-radius: 13px 13px 13px 13px;
+}
+
+.price {
+  font-weight: 600;
+}
