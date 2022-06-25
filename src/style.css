@@ -43,6 +43,7 @@ padding: 0 0 50px 50px;
 
 .card {
   margin: 0px 50px 0px 50px;
+  position:relative;
 }
 
 .card > p {
@@ -64,4 +65,22 @@ height:14px;
 
 .grey {
   color: grey;
+}
+
+.card-list {
+display: flex;
+align-items: center;
+justify-content: center;
+justify-content: space-evenly;
+}
+
+.sold-out {
+  position:relative;
+    top: 40px;
+    left: 8px;
+    width:100px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }

@@ -4,6 +4,7 @@ import React from 'react'
 export default function Card(props) {
   return (
     <section className="card">
+      <div className="sold-out">Sold out</div>
       <img src={props.img} className= "card-pic" alt=""></img>
       <p><img src ='images/star.png' className="star"alt=""></img> <span className="grey">{props.rating}&nbsp;({props.reviewCount}) &nbsp;{props.location}</span></p>
       <p>{props.title}</p>
