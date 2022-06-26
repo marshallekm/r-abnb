@@ -1,24 +1,22 @@
 import React from 'react'
-
+import imgStar from '../images/star.png'
 
 export default function Card(props) {
 
 function badgeText() {
- if (props.openSpots === 0) {
+ if (props.item.openSpots === 0) {
     return "SOLD OUT"
-  } else if (props.location === "Online") {
+  } else if (props.item.location === "Online") {
     return "ONLINE"
-  } else {
-   return;
   }
 }
   return (
     <section className="card">
-      <div className="sold-out">{badgeText()}</div>
-      <img src={props.img} className= "card-pic" alt=""></img>
-      <p><img src ='images/star.png' className="star"alt=""></img> <span className="grey">{props.rating}&nbsp;({props.reviewCount}) &nbsp;{props.location}</span></p>
-      <p>{props.title}</p>
-      <p><nobr className="price">From {props.price}</nobr><span className="grey">/person</span></p>
+     {badgeText && <div className="sold-out">{badgeText()}</div>}
+      <img src={props.item.coverImg} className= "card-pic" alt=""></img>
+      <p><img src = {imgStar} className="star"alt=""></img> <span className="grey">{props.item.stats.rating}&nbsp;({props.item.stats.reviewCount}) &nbsp;{props.location}</span></p>
+      <p>{props.item.title}</p>
+      <p><nobr className="price">From {props.item.price}</nobr><span className="grey">/person</span></p>
     </section>
   )
 }
